@@ -23,7 +23,13 @@
           <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-          <li><%=link_to(content_tag(:i,"Log out",class:"fa fa-sign-out"), destroy_user_session_path, method: :delete)%> </li>
+          <% if current_user.admin? %>
+          <li>
+            <%= link_to("Admin Background", admin_products_path ) %>
+          </li>
+          <% end %>
+          <li>
+            <%=link_to(content_tag(:i,"Log out",class:"fa fa-sign-out"), destroy_user_session_path, method: :delete)%> </li>
         </ul>
       </li>
       <% end %>
