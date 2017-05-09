@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col-md-12"?
+  <div class="col-md-12">
 
   <h2> Cart </h2>
 
@@ -25,7 +25,7 @@
           <% end %>
         </td>
         <td>
-          <%= link_to(cart_item.product.title, products_path(cart_item.product)) %>
+          <%= link_to(cart_item.product.title, product_path(cart_item.product)) %>
         </td>
         <td>
           <%= cart_item.product.price %>
@@ -35,6 +35,9 @@
         </td>
       </tr>
       <% end %>
+
+    </tbody>
+  </table>
 
       <br/>
 
